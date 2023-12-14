@@ -1,9 +1,8 @@
 // Import necessary modules
-import express from "express";
-import { OpenAI } from "openai"; // Update import statement for OpenAI
-import cors from "cors";
+const express = require("express");
+const { OpenAI } = require("openai");
+const cors = require("cors");
 
-// Create an instance of the express app
 const app = express();
 const port = 5005;
 
