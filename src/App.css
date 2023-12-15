@@ -29,9 +29,10 @@ body {
 .code-mirror-container {
     flex: 1;
     display: flex;
-    /* max-height: 50svh;
-    max-width: 50vw;
-    overflow-x: auto;
+    height: 50svh;
+    /* max-height: 500svh; */
+    /* max-width: 50vw; */
+    /* overflow-x: auto;
     overflow-y: auto; */
     justify-content: space-between;
     padding: 20px;
@@ -41,7 +42,7 @@ body {
 .code-mirror {
     flex: 1;
     margin: 0 10px;
-    max-height: 50svh;
+    height: 50svh;
     max-width: 50vw;
     overflow-x: auto;
     overflow-y: auto;

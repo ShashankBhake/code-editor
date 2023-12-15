@@ -46,7 +46,7 @@ export default function App() {
     return (
         <div id="app-container" className={`code-mirror-app ${theme}`}>
             <div className="header">
-                <h2>CodeMirror App</h2>
+                <h2>CodeEnhancer</h2>
                 <button className="theme-switch-button" onClick={toggleTheme}>
                     Toggle Theme
                 </button>
@@ -54,7 +54,7 @@ export default function App() {
             <div className="code-mirror-container">
                 <CodeMirror
                     value={leftEditorValue}
-                    height="200px"
+                    height="750px"
                     theme={theme}
                     extensions={[javascript({ jsx: true })]}
                     onChange={onLeftEditorChange}
@@ -62,7 +62,7 @@ export default function App() {
                 />
                 <CodeMirror
                     value={rightEditorValue}
-                    height="200px"
+                    height="750px"
                     theme={theme}
                     extensions={[javascript({ jsx: true })]}
                     className="code-mirror"
