@@ -3,7 +3,6 @@ import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import "./App.css"; // Import your CSS file for styling
 import axios from "axios";
-// import { BardAPI } from "bard-api-node";
 
 export default function App() {
     const [leftEditorValue, setLeftEditorValue] = useState(
