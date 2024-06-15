@@ -12,7 +12,7 @@ export default function App() {
     const [theme, setTheme] = useState("dark"); // Initial theme
 
     const onLeftEditorChange = (newValue, viewUpdate) => {
-        console.log("Left editor value:", newValue);
+        // console.log("Left editor value:", newValue);
         setLeftEditorValue(newValue);
     };
 
@@ -27,7 +27,7 @@ export default function App() {
 
         try {
             // Replace 'your-query' with the actual query you want to send
-            const query = leftEditorValue + "fix this code, just send the code";
+            const query = leftEditorValue + ", fix this code, just send the code";
             console.log(leftEditorValue);
 
             // Make a GET request to your backend
