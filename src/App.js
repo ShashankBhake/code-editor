@@ -32,7 +32,7 @@ export default function App() {
 
             // Make a GET request to your backend
             const res = await axios.get(
-                `http://localhost:5005/getOpenAIResponse?query=${query}`
+                `https://getgeminiresponse.vercel.app/getOpenAIResponse?query=${query}`
             );
 
             // Update the state with the response
