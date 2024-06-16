@@ -32,7 +32,7 @@ export default function App() {
 
             // Make a GET request to your backend
             const res = await axios.get(
-                `/getOpenAIResponse?query=${query}`
+                `https://code-enhancer-production.up.railway.app/getOpenAIResponse?query=${query}`
             );
 
             // const res = await axios.get(

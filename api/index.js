@@ -6,18 +6,23 @@ const cors = require("cors");
 require('dotenv').config();
 
 const app = express();
-const port = 5005;
+const port = process.env.PORT || 5005;
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
 // Use the cors middleware
 app.use(cors());
 
+app.get("/ping", async (req, res) => {
+    return res.send("pong");
+});
+
 // Define a route for handling requests
 app.get("/getOpenAIResponse", async (req, res) => {
     try {
+        console.log("Query\n\n");
         // Extract the query from the request
         const query = req.query.query;
-
+        console.log("Query:", req.query);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         // Get OpenAI response
         const result = await model.generateContent(query);
