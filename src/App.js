@@ -32,8 +32,12 @@ export default function App() {
 
             // Make a GET request to your backend
             const res = await axios.get(
-                `https://getgeminiresponse.vercel.app/getOpenAIResponse?query=${query}`
+                `/getOpenAIResponse?query=${query}`
             );
+
+            // const res = await axios.get(
+            //     `${process.env.NODE_ENV === 'development' ? 'http://localhost:5005' : ''}/getOpenAIResponse?query=${query}`
+            // );
 
             // Update the state with the response
             setRightEditorValue(res.data);
