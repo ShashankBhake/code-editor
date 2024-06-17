@@ -49,8 +49,10 @@ export default function App() {
 
             // Update the state with the response
             setRightEditorValue(res.data);
+            setIsLoading(false); // Set loading state to false
         } catch (error) {
             console.error("Error:", error);
+            setIsLoading(false); // Set loading state to false
         }
     };
 
