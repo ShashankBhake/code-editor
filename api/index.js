@@ -17,7 +17,7 @@ app.get("/ping", async (req, res) => {
 });
 
 // Define a route for handling requests
-app.get("/getOpenAIResponse", async (req, res) => {
+app.get("/getGeminiResponse", async (req, res) => {
     try {
         console.log("Query\n\n");
         // Extract the query from the request
@@ -52,5 +52,5 @@ app.get("/getOpenAIResponse", async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on Port ${port}`);
 });
