@@ -92,21 +92,15 @@ export default function App() {
                 />
             </div>
             <div className="footer">
-                <div className="submit-button-container">
-                    {/* <button
-                    className="submit-button"
-                    onClick={processTextAndUpdateRightEditor} >
-                    Submit
-                </button> */}
-
-                    {isLoading ? (
-                        <div class="loader">
-                            <div class="loader__circle"></div>
-                            <div class="loader__circle"></div>
-                            <div class="loader__circle"></div>
-                            <div class="loader__circle"></div>
-                        </div>
-                    ) : (
+                {isLoading ? (
+                    <div class="loader">
+                        <div class="loader__circle"></div>
+                        <div class="loader__circle"></div>
+                        <div class="loader__circle"></div>
+                        <div class="loader__circle"></div>
+                    </div>
+                ) : (
+                    <div className="submit-button-container">
                         <button className="submit-button" onClick={processTextAndUpdateRightEditor}>
                             <div class="svg-wrapper-1">
                                 <div class="svg-wrapper">
@@ -126,8 +120,9 @@ export default function App() {
                             </div>
                             <span>Send</span>
                         </button>
-                    )}
-                </div>
+                    </div>
+                )
+                }
             </div>
         </div>
     );
